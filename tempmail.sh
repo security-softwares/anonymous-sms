@@ -121,7 +121,7 @@ generate_email_address() {
     valid_email_address_regex="[a-z0-9]+@(1secmail\.(com|net|org)|esiix.co|wwjmp.com|xojxe.com|yoggm.com)"
     username_black_list_regex="(abuse|webmaster|contact|postmaster|hostmaster|admin)"
     username_black_list="- abuse\n- webmaster\n- contact\n- postmaster\n- hostmaster\n- admin"
-    domains="1secmail.com wwjmp.com"
+    domains="1secmail.com"
 
     # Randomly pick one of the domains mentiond above.
     domain=$(echo -e "$domains" | tr " " "\n" | randomize | tail -1)
