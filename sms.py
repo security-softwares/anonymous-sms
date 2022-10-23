@@ -74,6 +74,6 @@ time.sleep(2)
 func()
 while str(otp)=='' or str(otp).isspace()==True:
     func()
-sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=sellaite.cookies(),data={"form_code":otp ,"trans_num":tn,"trans_id":tid,"uk":' '})
+sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=sellaite.cookies,data={"form_code":otp ,"trans_num":tn,"trans_id":tid,"uk":' '})
 if sellaite.status_code==200:
     print("successful")
