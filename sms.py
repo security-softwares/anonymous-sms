@@ -48,15 +48,15 @@ try:
     
     print(ki,'\n',kkk)
 
-    tn=ki
+    tn=ki.strip()
     tid=kkk.strip()
 except:
     print("error occured\n try again")
     exit()
 
-os.system("bash tempmail.sh -l| tail -n 1 > otp.txt")
+#os.system("bash tempmail.sh -l| tail -n 1 > otp.txt")
 
-os.system("awk -F 'CODE: ' '{print  $2}' otp.txt > verify.txt")
+#s.system("awk -F 'CODE: ' '{print  $2}' otp.txt > verify.txt")
 
 
 
@@ -74,6 +74,8 @@ time.sleep(2)
 func()
 while str(otp)=='' or str(otp).isspace()==True:
     func()
-sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=sellaite.cookies,data={"form_code":otp ,"trans_num":tn,"trans_id":tid,"uk":' '})
+cook=sellaite.cookies.get_dict()
+
+sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=cook,data={"form_code":otp,"trans_num":tn,"trans_id":tid,"uk":' '})
 if sellaite.status_code==200:
     print("successful")
