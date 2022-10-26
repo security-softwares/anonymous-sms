@@ -48,8 +48,8 @@ try:
     
     print(ki,'\n',kkk)
 
-    tn=ki.strip()
-    tid=kkk.strip()
+    tid=ki.strip()
+    tn=kkk.strip()
 except:
     print("error occured\n try again")
     exit()
@@ -75,8 +75,6 @@ func()
 while str(otp)=='' or str(otp).isspace()==True:
     func()
 cook=sellaite.cookies.get_dict()
-Hd=sellaite.headers
-otp=int(otp)
 sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=cook,headers=Hd,data={"form_code":otp,"trans_num":tn,"trans_id":tid,"uk":' '})
 if sellaite.status_code==200:
     print("successful")
