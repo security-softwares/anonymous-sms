@@ -7,3 +7,7 @@ cd anonymous-sms
 
 python3 sms.py
 ```
+### Fully launched
+
+- For updates
+>bash update.sh
