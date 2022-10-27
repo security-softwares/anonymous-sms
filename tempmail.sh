@@ -1,7 +1,4 @@
 #!/bin/bash
-
-# Author: Hemant Sachdeva <hemant.evolver@gmail.com>
-# Date Created: 25/07/2021
 #
 # Dependencies: jq, curl, w3m
 #
