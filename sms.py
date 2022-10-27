@@ -76,6 +76,6 @@ while str(otp)=='' or str(otp).isspace()==True:
     func()
 otp=int(otp)
 cook=sellaite.cookies.get_dict()
-sellaite=requests.request("POST","https://sms.sellaite.com/index_smssend.php",cookies=cook,data={"form_code":otp,"trans_num":tn,"trans_id":tid,"uk":' '})
+sellaite=requests.post("https://sms.sellaite.com/index_smssend.php",cookies=cook,data={"form_code":otp,"trans_num":tn,"trans_id":tid,"uk":' '})
 if sellaite.status_code==200:
     print("successful")
