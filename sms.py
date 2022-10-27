@@ -36,7 +36,7 @@ headers={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101
 print(k)
 head={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0"}
 #form_email=pirofoc370%40abudat.com&form_countrycodenumber=91&form_ccode=91&form_phonenumber=7742114180&form_message=n&element_6_1=1&submitID=1&submitInfo=
-h={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0"}
+h={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/}
 sellaite=requests.request("POST",'https://sms.sellaite.com/index_smssend.php',data={"form_email":k,"form_countrycodenumber":e,"form_ccode":e,"form_phonenumber":num,"form_message":message,"element_6_1":1,"submitID":1,"submitInfo":' '}) 
 
 # print(sellaite.content)
@@ -74,8 +74,8 @@ time.sleep(2)
 func()
 while str(otp)=='' or str(otp).isspace()==True:
     func()
-otp=int(otp)
+
 cook=sellaite.cookies.get_dict()
-sellaite=requests.post("https://sms.sellaite.com/index_smssend.php",cookies=cook,data={"form_code":otp,"trans_num":tn,"trans_id":tid,"uk":' '})
+sellaite=requests.post("https://sms.sellaite.com/index_smssend.php",cookies=cook,data={"form_code":otp,"submitID":2,"trans_num":tn,"trans_id":tid,"uk":' '})
 if sellaite.status_code==200:
     print("successful")
