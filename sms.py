@@ -32,9 +32,9 @@ os.system('bash tempmail.sh -g > file.txt')
 kk=open('file.txt','r')
 
 k=kk.read().strip()
-headers={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0","Accept-Language":" en,hi;q=0.5","Accept-Encoding":" gzip, deflate","Referer":"https://sms.sellaite.com/index_smssend.php",'Content-type': 'application/x-www-form-urlencoded',"Origin":" https://sms.sellaite.com","Sec-Fetch-Dest": "document","Sec-Fetch-Site":" same-origin","Sec-Fetch-Mode":" navigate"}
+#headers={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0","Accept-Language":" en,hi;q=0.5","Accept-Encoding":" gzip, deflate","Referer":"https://sms.sellaite.com/index_smssend.php",'Content-type': 'application/x-www-form-urlencoded',"Origin":" https://sms.sellaite.com","Sec-Fetch-Dest": "document","Sec-Fetch-Site":" same-origin","Sec-Fetch-Mode":" navigate"}
 print(k)
-head={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0"}
+#head={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0"}
 #form_email=pirofoc370%40abudat.com&form_countrycodenumber=91&form_ccode=91&form_phonenumber=7742114180&form_message=n&element_6_1=1&submitID=1&submitInfo=
 h={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/}
 sellaite=requests.request("POST",'https://sms.sellaite.com/index_smssend.php',data={"form_email":k,"form_countrycodenumber":e,"form_ccode":e,"form_phonenumber":num,"form_message":message,"element_6_1":1,"submitID":1,"submitInfo":' '}) 
