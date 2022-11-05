@@ -36,7 +36,7 @@ k=kk.read().strip()
 print(k)
 #head={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0"}
 #form_email=pirofoc370%40abudat.com&form_countrycodenumber=91&form_ccode=91&form_phonenumber=7742114180&form_message=n&element_6_1=1&submitID=1&submitInfo=
-h={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/}
+#h={"User-Agent ":"Mozilla/5.0 (X11; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/}
 sellaite=requests.request("POST",'https://sms.sellaite.com/index_smssend.php',data={"form_email":k,"form_countrycodenumber":e,"form_ccode":e,"form_phonenumber":num,"form_message":message,"element_6_1":1,"submitID":1,"submitInfo":' '}) 
 
 # print(sellaite.content)
